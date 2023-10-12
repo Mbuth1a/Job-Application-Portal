@@ -1,0 +1,57 @@
+{% load static %} 
+
+<div class="mt-4" style="background-color:black ; width:100%; height:340px">
+    <div class ="container">
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <h2 class="text-white">Contact Information</h2>
+                <p style=" font-size: 18px ; color:yellow; font-weight:Bold">
+                    <i class="fa fa-map-marker text-danger"></i> 
+                    Kenya Nairobi Westlands   
+                </p>
+                <p style=" font-size: 18px ; color:yellow; font-weight:Bold">
+                    <i class="fa fa-address-card-o text-danger" ></i>
+                    jobseekr@gmail.com 
+              
+                </p>
+                <p style=" font-size: 18px ; color:yellow; font-weight:Bold">
+                    <i class="fa fa-mobile text-danger"></i> 
+                    +254 742789021  |  +254 732000000 
+                </p>
+                <p style=" font-size: 18px ; color:yellow; font-weight:Bold">
+                    <i class="fa fa-globe text-danger"></i> 
+                    www.jobseekr.com  
+                </p>
+            </div>
+
+            <div class="col-md-4 mt-3">
+                <h3 class="text-uppercase text-white">Jobseekr</h3>
+                <p style=" font-size: 18px ; color:yellow">
+
+                    This platform supports and helps graduates land into their dream jobs and their futures secured.JobSeekr aids employers find competent
+                     candidates to work for them and at the end of the day it is a win-win situation for Us and You.
+                </p>
+
+            </div>
+           
+            <div class="col-md-4 mt-3">
+                <h3 class="text-uppercase text-white">NewsLetter</h3>
+                <p style=" font-size: 18px ; color:yellow">
+
+                    Visit our website for more information or contact us.
+                </p>
+
+                <form method="post"class="form-inline">
+                    {% csrf_token %}
+                    <input type="email" name="EmailId" placeholder="EMAIL ID" required class="form-control mr-2px">
+                    <input type="submit" value="Send" class="btn btn-primary">
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+{% load static %} 
+
+{% block body %}
+
+{% include 'admin_navigation.html' %} 
+<marquee class="text" style="color:red ; font-family:San-serif; font-size: 25px;color:brown ; background-color: black; font-weight:bolder; margin-top: 1%;">
+   view Recruiter on JobSeekr - Pending
+
+</marquee>
+
+<hr>
+<form class="container margin-top-5" method="post">
+    {% csrf_token %}
+    <label><b>Recruiter Name</b></label>
+    <input  type="text" name="uname" class="form-control" value="{{recruiter.user.first_name}} {{recruiter.user.last_name}} ">  
+    
+    <label><b>Status</b></label>
+    <select class="form-control" name="status">
+        <option value="Accept">Accept</option>
+        <option value="Reject">Reject</option>
+    </select>
+
+   
+   
+    <input  type="submit" name="Password" class="btn btn-primary" style="margin-top: 1%; margin-bottom:0 ; color:crimson ; background-color: black; height: 40px; font-size: 20px;">  
+
+</form>
+
+ {% include 'footer.html' %} 
+ {% if error == "no" %}
+    <script>
+        alert("Status changed successful");
+        window.location = ('{% url 'recruiter_all' %}')  
+    </script>
+{% endif %}  
+
+{% if error == "yes" %}
+    <script>
+        alert("Something went wrong...try again ");
+    </script>
+{% endif %}  
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% load static %} 
+
+{% block body %}
+
+{% include 'admin_navigation.html' %} 
+<marquee class="text" style="color:red ; font-family:San-serif; font-size: 25px;color:brown ; background-color: black; font-weight:bolder; margin-top: 1%;">
+   view all JobSeekr Users
+
+</marquee>
+
+<hr>
+<div class="container" >
+    <table class="table table-hover " id="example">
+        <thead>
+        <tr style="background-color: orange;">
+            <th>S.No.</th>
+            <th>Full Name</th>
+            <th>Email Id</th>
+            <th>Contact</th>
+            <th>Gender</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for i in data %}
+            <tr style="background-color: #FFDD8E;">
+                <td>{{forloop.counter}}</td> 
+                <td>{{i.user.first_name}} {{i.user.last_name}}</td> 
+                <td>{{i.user.username}}</td> 
+                <td>{{i.mobile}}</td> 
+                <td>{{i.gender}}</td> 
+                <td><img src = "{{i.image.url}}" style="width:100px ; height:100px; border-radius:50%"></td> 
+                <td><a href="{% url 'delete_user' i.user.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a></td> 
+            </tr>
+        {% endfor %}
+                
+
+        </tbody>
+    </table>
+</div
+
+{% endblock %}

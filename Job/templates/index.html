@@ -1,0 +1,121 @@
+{% load static %} 
+
+{% block body %}
+
+{% include 'navigation.html' %} 
+
+<style>
+    .container{
+        max-width: 90%;
+    }
+
+    .content{
+        text-align:center;
+        position:top;
+        bottom:0;
+        background:rgba(0,0,0,0.4);
+        color: white;
+        height: 30px;
+        width: 91%;
+
+    }
+
+
+</style>
+
+<div class="container-fluid" style="margin-top:1%">
+    <img src="{% static 'images/image2.jpg' %}" style="height:440px; width:100%">
+
+</div>
+
+<div class="container" style="background-color:black ; height:750px; margin-top:3%">
+   <h1 class="text-center text-white">-------- OUR |PLACED |APPLICANTS--------</h1>
+
+    <div class="row mt-3">
+        <div class="col-md-4">
+        
+            <div class="content text-white">
+                <p>FACEBOOK</p>
+            </div>
+
+                <img src="{% static 'images/f1.jpg' %}" style="width:100% ; margin-top: 5% ; height:200px ; border-radius:50%">
+               
+                <p class="text-white">This platform has helped me land my dream job..Thanks to JobSeekr.</p>
+        </div>
+
+
+        <div class="col-md-4">
+        
+            <div class="content text-white">
+                <p>M-GAS</p>
+            </div>
+
+                <img src="{% static 'images/f9.jpg' %}" style="width:100% ; margin-top: 5% ; height:200px ; border-radius:50%">
+               
+                <p class="text-white">After graduating and being out for 2years, I finally landed a job.</p>
+        </div>
+
+
+
+        <div class="col-md-4">
+        
+            <div class="content text-white">
+                <p>FAULU LOGISTICS</p>
+            </div>
+
+                <img src="{% static 'images/f7.jpg' %}" style="width:100% ; margin-top: 5% ; height:200px ; border-radius:50%">
+               
+                <p class="text-white">If you are looking for employment, I guarantee you are at the right place.</p>
+        </div>
+
+    </div>
+
+
+
+    <h1 class="text-center text-white">-------- OUR |SUCCESSFUL|RECRUITERS--------</h1>
+
+    <div class="row mt-2">
+        <div class="col-md-4">
+        
+            <div class="content text-white">
+                <p>FACEBOOK</p>
+            </div>
+
+                <img src="{% static 'images/facebook.jpg' %}" style="width:100% ; margin-top: 5% ; height:200px ; border-radius:50%">
+               
+                <p class="text-white">Our company being global, we appreciate the efforts of JobSeekr to ensure job opportunities are grabbed when they arise.</p>
+        </div>
+
+
+        <div class="col-md-4">
+        
+            <div class="content text-white">
+                <p>M-GAS</p>
+            </div>
+
+                <img src="{% static 'MGAS_Logo.png' %}" style="width:100% ; margin-top: 5% ; height:200px ; border-radius:50%">
+               
+                <p class="text-white">This platform has helped our company acquire competent employees .</p>
+        </div>
+
+
+
+        <div class="col-md-4">
+        
+            <div class="content text-white">
+                <p>FAULU LOGISTICS</p>
+            </div>
+
+                <img src="{% static 'images/Logistics-top.png' %}" style="width:100% ; margin-top: 5% ; height:200px ; border-radius:80%">
+               
+                <p class="text-white">If you are looking for workers, I guarantee you are at the right place.</p>
+        </div>
+
+    </div>
+
+</div>
+{% include 'footer.html' %} 
+
+
+
+ {% endblock %}

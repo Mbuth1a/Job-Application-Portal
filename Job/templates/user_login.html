@@ -1,0 +1,45 @@
+{% load static %} 
+
+{% block body %}
+
+{% include 'navigation.html' %} 
+
+
+<marquee class="text" style="color:red ; font-family:San-serif; font-size: 25px;color:brown ; background-color: black; font-weight:bolder; margin-top: 1%;">
+    JobSeekr Login
+
+</marquee>
+
+<hr>
+<form class="container margin-top-5" method="post">
+    {% csrf_token %}
+    <label><b>User Email</b></label>
+    <input  type="email" name="uname" class="form-control" placeholder="Enter your email" id="email">  
+    
+    <label><b>Password</b></label>
+    <input  type="password" name="pwd" class="form-control" placeholder="Enter  password" id="password">  
+   
+   
+    <input  type="submit" value="Login" name="submit" class="btn btn-primary" style="margin-top: 1%; margin-bottom:0 ; color:crimson ; background-color: black; height: 40px; font-size: 20px;">  
+    <a href="{% url 'user_signup' %}" class="btn btn-primary" style="margin-top: 1%; margin-bottom:0 ; color:crimson ; background-color: black; height: 40px; font-size: 20px;" >Create an Account</a>
+</form>
+
+{% include 'footer.html' %} 
+
+ {% if error == "yes" %}
+    <script>
+        alert("Login successful");
+        window.location = ('{% url 'user_home' %}')  
+    </script>
+{% endif %}  
+
+{% if error == "no" %}
+    <script>
+        alert("Something went wrong");
+    </script>
+{% endif %}   
+
+
+
+
+{% endblock %}
